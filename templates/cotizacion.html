@@ -1,0 +1,227 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+{% load url from future %}
+
+
+
+<form  role="form"  enctype="multipart/form-data" action="" method="POST" id="upload-image-form"> 
+        {% csrf_token %}
+        {{ form.as_p }}
+        </form> 
+
+        
+
+<div class="panel panel-info">
+      <div class="panel-heading">
+        <h2 class="panel-title"><center>INFORMACION DE INTERES </center></h2>
+         <li><a href="/principal">REGRESAR A LA PAGINA PRINCIPAL</a></li>
+
+             
+      </div>
+
+
+    <div class="panel-body">
+
+            <div class="row">
+
+             <div class="col-md-12">
+                <div class="thumbnail">                                    
+                  <div class="caption">
+                    <h4><center>ARTETRONICA</center></h4>     
+                  </div>                     
+                  <left><p>   {{fecha}}</p></left>
+
+<center><p>ARTETRONICA:                Electronica ,Programacion y Robotica </p></center>
+<br>
+<br>
+<p>Hola    {{ user.first_name }} {{user.last_name }}     Muy buen dia. Reciba un afectuoso y cordial saludo.</p>
+<br>
+<p>Nos complace poder hacer negocios con usted, </p>
+<br>
+<p>Aca puede ver el detalle del producto/servico solicitado, </p>
+<p>ademas se le a enviado u correo electroico a:  {{user.email }} con la informacion del pedido  </p>
+<br>
+ <table>
+                                <tr>
+                                    <th>Producto</th><th>                </th>
+                                    <th>Precio_Unitario</th><th>         </th>
+                                    <th>Cantidad</th><th>           </th>
+                                    <th>precio total</th>
+                                </tr>
+
+                                {% for item in cart %}
+
+                                <tr>
+                              
+                                
+                                    <td>{{ item }}{{ item.product }}</td><td></td><td></td>
+                                    <td>{{ item.unit_price }}</td><td>.......................</td>
+                                    <td>{{ item.quantity }}</td><td>................</td>
+                                     <td></td>                                     
+                                    <td>{{ item.total_price }}</td>
+                                  </tr>
+                                  <tr></tr>
+
+                                {% endfor %}
+                                <td>{{ total }}</td>
+
+                            </table>
+                            <br>
+                            
+<p>Estaremos a la espera de recibir su pago, para despachar su pedido </p>
+
+<br>
+<p>Los precios estan en dolares de los Estados Unidos.</p>
+<p>Los precios  incluyen impuestos de IVA </p>
+<p>Los precios incluyen cargos por Envio a su destino.</p>
+<br>
+<p>Gracias por preferirnos.</p>
+<br>
+<p>Garantia:</p>
+<p>En Artetronica somos responsables y te entregamos producto 100% revisado y probado </p>
+<p>de acuerdo a las condiciones  pactadas. Si por algún motivo estas en desacuerdo con</p>
+<p> tu pedido contacta inmediatamente con nosotros.</p>
+<br>
+<br>
+<center><p>f.______________________________</p></centerp>
+<center><p>Artetronica</p></center>
+
+<br>
+<br>
+<p> Pague por tigo Money</p>
+<p> Pague por Wester Union</p>
+<p> Pague por Punto Expres de Farmacias Economicas</p>
+<p> Pague Banco Agricola Comercial</p>
+<br>
+ <li><a href="/principal">REGRESAR A LA PAGINA PRINCIPAL</a></li>
+
+
+
+
+     <div class="row">
+          <div class="col-md-3">
+                <div class="thumbnail">
+                  
+                  <a href=""><img src={{STATIC_URL}}chunchebot.jpg></a>
+                        
+                  <div class="caption">
+                    <h4><center>Paypal</center></h4>  
+                    <p>Datos para hacer la transferencia </p>   
+                      
+                  </div>      
+                </div>
+          </div>
+
+
+          <div class="col-md-3">
+                <div class="thumbnail">
+                  
+                  <a href=""><img src={{STATIC_URL}}chunchebot.jpg></a>
+                        
+                  <div class="caption">
+                    <h4><center>Western Union</center></h4>  
+                    <p>Datos para hacer la transferencia </p>   
+                       
+                  </div>      
+                </div>
+          </div>
+
+
+          <div class="col-md-3">
+                <div class="thumbnail">
+                  
+                  <a href=""><img src={{STATIC_URL}}chunchebot.jpg></a>
+                        
+                  <div class="caption">
+                    <h4><center>Tigo money</center></h4>  
+                    <p>Datos para hacer la transferencia </p>   
+                   
+                  </div>      
+                </div>
+          </div>
+
+
+          <div class="col-md-3">
+                <div class="thumbnail">
+                  
+                  <a href=""><img src={{STATIC_URL}}chunchebot.jpg></a>
+                        
+                  <div class="caption">
+                    <h4><center>Transferencia bancaria</center></h4>  
+                    <p>Datos para hacer la transferencia </p>   
+                    
+                  </div>      
+                </div>
+          </div> 
+
+
+
+
+
+
+
+
+
+
+
+  
+                   
+                  
+                </div>
+            </div>
+
+
+          </div>
+
+        </div>
+  </div>
+
+
+
+
+
+
+
+ 
+           
+
+        
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  
+
+         
+          
+
+
+
+
+
+
+
+ 

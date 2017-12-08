@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+{% load url from future %}           
+
+        
+      
+ <br>
+
+<div class="panel panel-info">
+      <div class="panel-heading">
+            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><font size="4" color="black">Ordenar por</font></a><b class="caret"></b></a>
+               
+                      <ul class="dropdown-menu">
+                          <li><a href="/informacion">precio mas bajo</a></li>
+                          <li><a href="/listado/usuario">precio mas alto</a></li>
+                          <li><a href="/listado/usuario">mejor evaluado</a></li>
+                          <li><a href="/listado/usuario">peor evaluado</a></li>  
+                          <li><a href="/listado/usuario">usuario</a></li> 
+                                                                                               
+                           
+                  </ul>
+            </li>
+       
+                       
+      </div>
+
+
+<div class="panel-body">
+
+        
+          {% for j in productos %} 
+                
+
+           <div class="col-md-3">   
+                <div class="thumbnail">
+                  
+                       <h4><center> {{j.nombre}}</center></h4> 
+                       <img src={{MEDIA_URL}}{{j.imagen1}} />             
+                                   
+                    <h4> Precio-->$ {{j.precio_A }}</h4> 
+                                <form action='/add_to_cart/{{j.id}}/' method='post'>
+                                  {% csrf_token %}
+                                <label for="username">cantidad</label>
+                                <input type="text" name="cant" value="1" id="cant" size="10">
+                                <input type="submit" value="comprar"  />                               
+                                        </form>
+
+                      <li><a href="/get_cart/">Ver mi pedido</a></li>
+                                  
+                 </div>
+                </div>
+
+
+
+
+
+
+
+
+
+              
+                
+                
+           {% endfor %}  
+        
+       
+                
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  
+
+         
+          
+
+
+
+
+
+
+
+ 

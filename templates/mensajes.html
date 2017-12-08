@@ -1,0 +1,150 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+{% load url from future %}       
+
+<div class="panel panel-info">
+      <div class="panel-heading">
+        <h2 class="panel-title"><center>Pregunta, sera un plaser responderte </center></h2>
+
+             
+      </div>
+
+
+    <div class="panel-body">
+
+            <div class="row">
+
+               <div class="col-md-3">
+               </div> 
+
+             <div class="col-md-6">
+                <div class="thumbnail">                                    
+                  <div class="caption">
+                    <h4><center>Escribe tu pregunta, a la brevedad te responderemos, revisa las preguntas del foro, talvez tu preguta ya fue respondida </center></h4>     
+                  </div>                  
+                   
+                   <form action="" method="post" enctype="multipart/form-data"> 
+                    {% csrf_token%}
+                    
+                     <table>                          
+                         <tr> 
+                               <td bgcolor=#7BDBF3 >{{ form.mensaje }}</td> 
+                               <td bgcolor=#7BDBF3 >{{ form.respuesta }}</td>
+                                                   
+                               
+                         </tr>
+
+                    </table>
+                    <p><input type="submit" value="Enviar (OK)"></p>
+                     <td bgcolor=#7BDBF3 >{{ form.id_usuario }}</td>
+                                <td bgcolor=#7BDBF3 >{{ form.fecha }}</td>
+
+                                       
+                    </form>    
+                 
+
+                  
+                </div>
+            </div>
+
+            <div class="col-md-3">
+            </div>  
+
+        </div>  
+
+
+
+
+
+
+
+
+ {%  for i in mensajes_anteriores   %}
+
+
+ <div class="row">
+
+               <div class="col-md-1">
+               </div> 
+                <div class="col-md-1">
+                   
+               </div>
+
+             <div class="col-md-4">
+                <div class="thumbnail">                                    
+                    
+                      <p> {{ i.mensaje }}</p>
+                  
+                </div>
+            </div>
+
+           <div class="col-md-1">
+                   <center> <a href=""><img src={{STATIC_URL}}tronico.jpg></a></center> 
+               </div>
+            <div class="col-md-4">
+                <div class="thumbnail">                                    
+                   
+                     
+                      <p> {{ i.respuesta }}</p>
+                  
+                </div>
+            </div>
+
+
+
+            <div class="col-md-1">
+            </div>  
+
+
+         </div>
+ {%  endfor  %}   
+
+
+
+
+        </div>
+  </div>
+
+
+           
+
+        
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  
+
+         
+          
+
+
+
+
+
+
+
+ 

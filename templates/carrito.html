@@ -1,0 +1,216 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+{% load url from future %}       
+
+<div class="panel panel-info">
+      <div class="panel-heading">
+        <h2 class="panel-title"><center>Pedido de productos </center></h2>                
+      </div>
+
+
+    <div class="panel-body">
+
+            <div class="row">
+
+             <div class="col-md-8">
+                <div class="thumbnail">                                    
+                  <div class="caption">
+                    <h4><center>Detalle del pedido</center></h4>     
+                  </div>                  
+                   
+
+                            <table BORDER="3" CELLSPACING="5">
+                                <tr  align="center">
+                                    <td WIDTH="100">Cantidad</td><td></td>
+                                    <td WIDTH="600">Producto</td><td> </td>
+                                    <td WIDTH="300">Precio_Unitario</td><td> </td>
+                                    <td WIDTH="400">precio total</td>
+                                </tr >
+
+
+                                {% for item in cart %}  
+
+                                <tr  align="center">                                  
+                              
+                                    <td WIDTH="100">{{ item.quantity }}</td> <td></td>  
+                                    <td WIDTH="600">{{ item.product }}</td>  <td></td> 
+                                    <td WIDTH="300">{{ item.unit_price }}</td> <td></td>  
+                                    <td WIDTH="400">{{ item.total_price }}</td>
+                                  
+
+                                </tr>                                  
+                                
+
+                                {% endfor %}
+
+                                
+                                <br>
+                            </table>
+                             <br> 
+                             <h2><center>Total a pagar: {{ total }} </center></h2>
+
+                            
+                             <br>
+                             <br>
+
+                             <p>Envio por correo nacional + 3.00</p>
+                             <p>Envio por correo internacional + 8.00</p>
+                             <p>Entrega en local artrtronica Ahuachapan + 0.00</p> 
+                             <p>Entrega en Universidad de El Salvador + 0.00</p>
+                             <p>Encomienda ruta 202, terminal de occidente  + 0.00</p>  
+                  
+                  
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="thumbnail">                                    
+                  
+                   <br>
+                   <center> <a href="/pedido"><button >Realizar el pedido</button></a></center> 
+                   <br>
+                    <p>Al realizar el pedido se le enviara un correo electronico con la informacion del pedido y las diferetes formas que tiene para pagar.</p> 
+
+                    <p>Ademas se le enviaran los datos de la persona a quien se debe dirigir el pago.</p> 
+
+                    <p>Una vez verificado el pago se procedera a realizar el evio </p> 
+                    
+                                                  
+                  
+                  
+                </div>
+            </div>
+
+
+          </div>
+
+
+
+
+
+
+<div class="row">
+
+             <div class="col-md-3">
+                <div class="thumbnail"> 
+                  <a href=""><img src={{STATIC_URL}}reembolso.jpg></a>                                   
+                  <div class="caption">
+                     
+                  </div>                  
+                   
+
+                            
+                  
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="thumbnail">      
+                <a href=""><img src={{STATIC_URL}}western.jpg></a>                              
+                  <div class="caption">
+                         
+                  </div>                  
+                   
+
+                            
+                  
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="thumbnail">   
+                <a href=""><img src={{STATIC_URL}}bac.jpg></a>                                 
+                  <div class="caption">
+                         
+                  </div>                  
+                   
+
+                            
+                  
+                </div>
+            </div>
+
+
+            <div class="col-md-3">
+                <div class="thumbnail">   
+                <a href=""><img src={{STATIC_URL}}tigo-money.jpg></a>                                 
+                  <div class="caption">
+                        
+                  </div>                  
+                   
+
+                            
+                  
+                </div>
+            </div>
+
+
+            
+
+          </div>
+
+
+
+
+
+
+
+
+
+
+        </div>
+  </div>
+
+
+
+
+
+
+
+ 
+           
+
+        
+
+{% endblock %}
+
+
+{ % extends "base.html" %}
+{ % block content %}
+
+{ % endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  
+
+         
+          
+
+
+
+
+
+
+
+ 

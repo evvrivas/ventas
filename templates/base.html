@@ -1,0 +1,165 @@
+{% load staticfiles %}    
+
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+         
+    <link href={{STATIC_URL}}bootstrap/css/bootstrap.min.css rel="stylesheet" media="screen">
+    <link href={{STATIC_URL}}bootstrap/css/jquery.dataTables.css rel="stylesheet">
+    <link href={{STATIC_URL}}css/style.css rel="stylesheet">
+  
+  
+
+  </head>
+
+
+
+  <body> 
+          <br>
+          <div class="row">
+
+             <div class="col-md-3">
+                 
+                 <center><img src= {{STATIC_URL}}logo.gif />
+                 <li>Comprar y vender rapido</li>           
+                
+                      
+            </div>
+
+  <div class="col-md-3">
+               
+                 <br>
+                 <a href="/listado/oferta" class="btn btn-success" role="button">^producto</a>
+                 <a href="/listado/oferta" class="btn btn-info" role="button">ver productos</a>
+                 <a href="/listado/oferta" class="btn btn-danger" role="button">Tienda</a>
+                 <a href="/listado/oferta" class="btn btn-danger" role="button">Tienda</a>
+                                 
+            </div>
+
+
+<div class="col-md-3">
+               
+                <br><br><br><br>
+                
+                       <form action="." method="post" enctype="multipart/form-data" > 
+                            {% csrf_token%}
+                             <table> 
+                             <br>
+                                {{ form.as_p }}                                
+                            </table>
+                            <p><input type="submit" value="Buscar" name="buscar"></p>
+                        </form>  
+                
+            </div>
+
+
+
+
+
+
+
+              <div class="col-md-3">
+                      <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><font size="4" color="black">Que quieres comprar hoy</font></a><b class="caret"></b></a>
+               
+                      <ul class="dropdown-menu">
+                          <li><a href="/informacion">servicios</a></li>
+                          <li><a href="/listado/usuario">linea blanca</a></li>
+                          <li><a href="/listado/usuario">herramientas</a></li>
+                          <li><a href="/listado/usuario">ropa nueva</a></li>  
+                          <li><a href="/listado/usuario">ropa usada</a></li> 
+                          <li><a href="/listado/usuario">calzado</a></li> 
+                          <li><a href="/listado/usuario">celulares</a></li> 
+                          <li><a href="/listado/usuario">tecnologia</a></li> 
+                          <li><a href="/listado/usuario">Acsesorios y computadoras</a></li> 
+                          <li><a href="/listado/usuario">juegos</a></li> 
+                          <li><a href="/listado/usuario">industriales</a></li> 
+                          <li><a href="/listado/usuario">vehiculos</a></li> 
+                          <li><a href="/listado/usuario">casas e inmuebles</a></li> 
+                          <li><a href="/listado/usuario">Alquileres</a></li> 
+                          <li><a href="/listado/usuario">otros</a></li> 
+                                                                       
+                           
+                  </ul>
+            </li>
+           
+             
+            </div>
+             
+
+
+
+            </div>
+
+             
+                   
+         
+<br>
+
+    {% block content %}
+    {% endblock %}
+
+<br>
+
+
+        
+  <div class="panel panel-info">
+      <div class="panel-heading">
+        <h2 class="panel-title"><center>Contactar con StoreMan... </center></h2>             
+      </div>
+
+
+    <div class="panel-body">
+
+            <div class="row">
+
+
+
+             <div class="col-md-4">
+                <div class="thumbnail">
+                        
+                  <div class="caption">     
+                    <li>REGISTRARME  </li>               
+                   <li>artetronica@gmail.com </li>    
+                  </div>      
+                </div>
+            </div>
+
+
+            
+             <div class="col-md-4">
+                <div class="thumbnail">
+                        
+                  <div class="caption">     
+                    <li>El Salvador (503) 78218224 </li>               
+                   <li>artetronica@gmail.com </li>    
+                  </div>      
+                </div>
+            </div>
+
+            
+
+            <div class="col-md-2">          
+
+                     <center> <a href=""><img src={{STATIC_URL}}tronico.jpg></a></center> 
+                       
+            </div>
+
+          </div>
+
+        </div>
+  </div>
+
+    <script src={{STATIC_URL}}bootstrap/js/jquery.min.js></script>
+    <script src={{STATIC_URL}}bootstrap/js/bootstrap.min.js></script>
+
+    
+
+  </body>
+</html>
+
+
+
+

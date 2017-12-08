@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+{% load url from future %}           
+
+        <form  role="form"  enctype="multipart/form-data" action="" method="POST" id="upload-image-form"> 
+        {% csrf_token %}
+        {{ form.as_p }}
+        </form> 
+
+        <center><h2> *------* A r t e t r o n i c a *------*</h2> </center>
+        
+<div class="panel panel-info">
+      <div class="panel-heading">
+        <h2 class="panel-title"><center>    USUARIOS REGISTRADOS   </center></h2>              
+      </div>
+
+
+<div class="panel-body">
+
+        <div class="row">
+
+          {% for i in productos %} 
+
+           <div class="col-md-2">   
+                <div class="thumbnail">
+                  
+                       <img src={{MEDIA_URL}}{{i.imagen1}} /> 
+                       <p>{{i.ocupacion}}</p>  
+                                  
+                 </div>
+                </div>
+          {% endfor %}         
+         
+       </div>
+                
+</div>
+</div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  
+
+         
+          
+
+
+
+
+
+
+
+ 

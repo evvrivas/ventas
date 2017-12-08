@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+{% load url from future %}       
+
+<div class="panel panel-info">
+      <div class="panel-heading">
+        <h2 class="panel-title"><center>INFORMACION DE INTERES </center></h2>
+
+             
+      </div>
+
+
+    <div class="panel-body">
+
+            <div class="row">
+
+               <div class="col-md-2">
+               </div> 
+
+             <div class="col-md-8">
+                <div class="thumbnail">                                    
+                  <div class="caption">
+                    <h4><center>Entrada de datos importantes</center></h4>     
+                  </div>                  
+                   
+                   <form action="" method="post" enctype="multipart/form-data"> 
+                    {% csrf_token%}
+                     <table> 
+                        {{ form }}
+                        
+                    </table>
+
+                    <p><input type="submit" value="Enviar (OK)"></p>
+                    
+                    </form>                 
+                  
+                </div>
+            </div>
+
+            <div class="col-md-2">
+            </div>  
+
+
+          </div>
+
+        </div>
+  </div>
+           
+
+        
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  
+
+         
+          
+
+
+
+
+
+
+
+ 

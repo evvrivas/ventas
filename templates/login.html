@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+{% load url from future %}       
+
+<div class="panel panel-info">
+      <div class="panel-heading">
+        <h2 class="panel-title"><center> </center></h2>
+
+             
+      </div>
+
+
+    <div class="panel-body">
+
+            <div class="row">
+
+              <div class="col-md-3">
+                
+            </div>
+
+
+             <div class="col-md-6">
+                <div class="thumbnail">                                    
+                  <div class="caption">
+                    <h4><center>Introduzca su correo electronico y su contraseña</center></h4>     
+                  </div>                  
+                   
+                       <center>
+                       <form action='.' method='post'>
+                              {% csrf_token %}
+                           <label for="username">Email-->:</label>
+                            <input type="text" name="username" value="" id="username">
+                            <br>
+                            <label for="password">Password:</label>
+                            <input type="password" name="password" value="" id="password">
+                           
+                            <input type="submit" value="Entrar" />
+                            <input type="hidden" name="next" value="/principal/" />
+                            <form action='.' method='post'>  
+                            <br>
+                            <li><a href="/entrada_usuario">Registrarme como usuario</a></li>                  
+                       </form >  
+                       </center>
+
+     
+                </div>
+            </div>
+
+
+               <div class="col-md-3">
+                
+            </div>
+
+
+
+
+
+
+
+          </div>
+
+        </div>
+  </div>
+
+
+
+
+
+
+
+ 
+        
+{% endblock %}
+
+
+{ % extends "base.html" %}
+{ % block content %}
+
+{ % endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  
+
+         
+          
+
+
+
+
+
+
+
+ 
